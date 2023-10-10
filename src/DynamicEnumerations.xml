@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mxtechies.dynamicenumerations.DynamicEnumerations"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Dynamic Enumerations</name>
+    <description>
+        This widget is used to create Enumerations from strings and allows creating new enumerations on fly during
+        runtime instead of using Mendix Enumerations or associations
+    </description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="selectorMode" type="boolean" defaultValue="false">
+                <caption>Selector Mode on</caption>
+                <description>Set true to make widget selector mode, false use in creator mode.</description>
+            </property>
+            <property key="optionString" type="attribute">
+                <caption>Source</caption>
+                <description>String attribute to hold the options available for enumeration</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="outputValue" type="attribute" required="false">
+                <caption>Target</caption>
+                <description>Attribute to hold the selected option string</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="labelCaption" type="string" required="false">
+                <caption>Caption for Selector</caption>
+                <description>Caption for selector can be empty.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
